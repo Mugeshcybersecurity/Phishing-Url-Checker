@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Phishing Url Checker</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/newlogo.jpg" rel="icon">
+  <link href="static/assets/img/newlogo.jpg" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Template Main CSS File -->
+  <link href="static/style.css" rel="stylesheet">
+  
+  <style>
+    /* Font and General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #121212;
+      color: #FFFFFF;
+    }
+
+    /* Title Styles with Gradient */
+    h1, h2 {
+      background: linear-gradient(90deg, #FF5733, #FFC300);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h3, h5 {
+      color: #FF5733;
+    }
+
+    p {
+      color: #B0B0B0;
+    }
+
+    /* Button Styles */
+    .btn, .button1, .button2, .get-started-btn, button[type="submit"] {
+      background-color: #FF5733;
+      color: #FFFFFF;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      border-radius: 25px;
+    }
+
+    .btn:hover, .button1:hover, .button2:hover, .get-started-btn:hover, button[type="submit"]:hover {
+      background-color: #e04a27;
+      box-shadow: 0px 0px 15px 0px #FF5733;
+    }
+
+    /* Search Bar Styles */
+    .form-control {
+      background-color: #333333;
+      color: #FFFFFF;
+      border: 2px solid #FF5733;
+      border-radius: 25px;
+      padding: 10px 20px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .form-control:focus {
+      border-color: #FFC300;
+      box-shadow: 0px 0px 10px 0px #FFC300;
+      outline: none;
+    }
+
+    .form-control::placeholder {
+      color: #B0B0B0;
+    }
+
+    /* Header Styles */
+    #header {
+      background-color: #1a1a1a;
+      border-bottom: 1px solid #FF5733;
+    }
+
+    .nav-menu a {
+      color: #FFFFFF;
+    }
+
+    .nav-menu a:hover {
+      color: #FF5733;
+    }
+
+    /* Footer Styles */
+    #footer {
+      background-color: #1a1a1a;
+      color: #B0B0B0;
+    }
+
+    #faq .bx-help-circle {
+      color: #FF5733;
+    }
+
+    #faq a {
+      color: #FF5733;
+    }
+
+    .icon-circle {
+      color: #FF5733;
+    }
+
+    .icon-arrrow {
+      color: #FF5733;
+    }
+
+    hr {
+      border-top: 1px solid #FF5733;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      
+      <h1 class="logo mr-auto"><a href="{{ url_for('home') }}">PHISHING URL CHECKER</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="{{ url_for('home') }}" class="logo mr-auto"><img src="static/assets/img/newlogo.jpg" alt="" class="img-fluid"></a>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a onclick="scrolldiv()">About</a></li>
+          <li><a href="{{ url_for('usecases') }}" target="_blank" rel="no-openner no-referrer">CASE STUDY</a></li>
+          <li class="drop-down"><a href="{{ url_for('home') }}">MORE</a>
+            <ul>
+              <li class="drop-down"><a href="#">Report Phishing Cases</a>
+                <ul>
+                  <li><a href="https://safebrowsing.google.com/safebrowsing/report_phish/?hl=en" target="_blank">Google Safe Browsing</a></li>
+                  <li><a href="https://support.google.com/websearch/answer/106318" target="_blank">Google Support</a></li>
+                </ul>
+              </li>              
+              <li class="drop-down"><a href="#">Take Phishing Quiz</a>
+                <ul>
+                  <li><a href="https://www.phishingbox.com/phishing-iq-test" target="_blank">Phishingbox</a></li>
+                  <li><a href="https://www.intradyn.com/phishing-quiz/" target="_blank">Intradyn</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+      <a href="static\assets\Phishing Website Identification.pdf" class="get-started-btn scrollto" download="nofallmagaguide">Download Guide <i class='bx bxs-download'></i></a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container d-flex flex-column align-items-center justify-content-center" data-aos="fade-up">
+      <h1>PHISHING URL CHECKER</h1>
+      <form action="/result" method="POST" role="form" class="form">
+        <div class="row no-gutters">
+          <div class="col-md-6 form-group pr-md-1">
+              <input type="url" name="name" class="form-control" id="name" placeholder="Enter a URL link in format http or https" required>
+          </div>
+        </div>
+        <div class="text-center"><button type="submit">Check My URL</button></div>
+        <p>
+          {% if name %}
+          <b><p>{{name[0]}}</p></b>
+          <h2 style="color:#FF5733;">Website is {{name[1]}} to use</h2><br>
+            {% if name[3] %}
+            <button class="button1" onclick="window.open('{{name[0]}}')" target="_blank" >{{name[2]}}</button><br>
+            {% else %}
+            <button class="button2" onclick="window.open('{{name[0]}}')" target="_blank" >{{name[2]}}</button><br>
+            {% endif %}
+          {% endif %}
+      </p>
+      </form> 
+      <img src="static\assets\img\Phishing.gif" class="img-fluid hero-img" alt="" data-aos="zoom-in" data-aos-delay="150">
+    </div>
+  </section><!-- End Hero -->
+
+  <!-- ======= Frequently Asked Questions Section ======= -->
+  <section id="faq" class="faq section-bg">
+    <div class="container">
+      <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+        <p>Some questions you may have...</p>
+      </div>
+
+      <div class="faq-list">
+        <ul>
+          <li data-aos="fade-up">
+            <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-1" class="collapsed">What is Phishing?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-1" class="collapse" data-parent=".faq-list">
+              <p>
+                Phishing is a type of online scam where attackers try to trick individuals into providing sensitive information such as passwords, credit card numbers, or personal details by pretending to be a trustworthy entity.
+              </p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="200">
+            <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-2" class="collapsed">Why should I care about phishing?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-2" class="collapse" data-parent=".faq-list">
+              <p>
+                Knowing about phishing is important because it helps you identify and avoid potential scams, protecting your personal information and financial assets.
+              </p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="300">
+            <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-3" class="collapsed">How can I protect Myself from Phishing attacks<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-3" class="collapse" data-parent=".faq-list">
+              <p>
+                You can protect yourself from phishing attacks by being cautious of unsolicited communications, verifying the legitimacy of requests for information, and using security software and two-factor authentication.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section><!-- End Frequently Asked Questions Section -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container d-lg-flex py-4">
+      <div class="mr-lg-auto text-center text-lg-left">
+        <div class="copyright">
+          &copy; Copyright <strong><span>PHISHING URL CHECKER</span></strong>. All Rights Reserved
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <!-- Vendor JS Files -->
+  <script src="static/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="static/assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assets/js/main.js"></script>
+
+</body>
+
+</html>
