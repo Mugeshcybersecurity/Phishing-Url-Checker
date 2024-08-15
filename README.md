@@ -1,101 +1,122 @@
-Here's an enhanced, professional version of the README with the requested changes:
-
 # Phishing URL Checker
+
+## Overview
+
+The Phishing URL Checker is an advanced cybersecurity tool designed to identify and flag potentially malicious websites. Leveraging state-of-the-art machine learning algorithms and deep neural networks, this project aims to provide a robust defense against phishing attacks, one of the most common forms of cyber threats.
 
 ## Objective
 
-This project aims to develop and compare machine learning models and deep neural networks for predicting phishing websites. We use a curated dataset of both phishing and benign URLs, extracting essential features from URL and website content. The performance of each model is measured and compared to identify the most effective approach for phishing detection.
+Our primary goal is to develop and compare various machine learning models for accurately predicting phishing websites. By analyzing a curated dataset of both legitimate and phishing URLs, we extract critical features from URL structures and website content to train our models. This approach allows us to achieve high accuracy in distinguishing between safe and malicious web addresses.
+
+## Key Features
+
+- Real-time URL analysis
+- Machine learning-powered prediction
+- User-friendly web interface
+- Educational resources on phishing prevention
+- Case studies of real-world phishing incidents
+
+## Technology Stack
+
+<div align="center">
+  <img src="https://www.python.org/static/community_logos/python-logo-generic.svg" width="200">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" width="200">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" width="200">
+</div>
+<div align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" width="100">
+  <img src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" width="200">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScq-xocLctL07Jy0tpR_p9w0Q42_rK1aAkNfW6sm3ucjFKWML39aaJPgdhadyCnEiK7vw&usqp=CAU" width="200">
+</div>
+
+- **Python**: Core programming language
+- **NumPy**: Numerical computing
+- **Pandas**: Data manipulation and analysis
+- **Matplotlib**: Data visualization
+- **Scikit-learn**: Machine learning algorithms
+- **TensorFlow**: Deep learning capabilities
 
 ## Installation
 
-To set up the project environment, follow these steps:
+To set up the project environment:
 
-1. Fork and clone this repository
-2. Navigate to the project directory
-3. Run the following command to install required packages:
+1. Clone the repository:
+   ```
+   git clone https://github.com/YourUsername/Phishing-URL-Checker.git
+   ```
+2. Navigate to the project directory:
+   ```
+   cd Phishing-URL-Checker
+   ```
+3. Install required packages:
+   ```
+   pip install -r requirements.txt
+   ```
 
-```bash
-pip install -r requirements.txt
-```
+## Usage
 
-## Technologies Used
+1. Run the main application script:
+   ```
+   python app.py
+   ```
+2. Open your web browser and go to `http://localhost:5000`
+3. Enter the URL you want to check in the provided input field
+4. Click "Check URL" to receive the analysis results
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" width=200> <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" width=200>
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" width=100>
-<img src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" width=200>
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScq-xocLctL07Jy0tpR_p9w0Q42_rK1aAkNfW6sm3ucjFKWML39aaJPgdhadyCnEiK7vw&usqp=CAU" width=200>
+## Model Performance
 
-## Feature Extraction
+Our comparative analysis of various machine learning models yielded the following results:
 
-The system collects URLs from user input on the web interface. It then extracts relevant features from these URLs based on:
-- Domain characteristics
-- HTML content
-- Address bar attributes
-
-These features are crucial for training and evaluating our machine learning models.
-
-## Machine Learning Models
-
-We compare various machine learning models to predict whether a URL is a phishing site. The model with the highest accuracy is selected for final implementation. URLs are categorized as either "phishing" or "legitimate", with results displayed on the webpage.
-
-For detailed implementation, please refer to `Phishingproject.ipynb`.
-
-## Results
-
-Performance comparison of various models used for URL detection:
-
-| ML Model                     | Accuracy | F1 Score | Recall | Precision |
+| Model                        | Accuracy | F1 Score | Recall | Precision |
 |------------------------------|----------|----------|--------|-----------|
 | Gradient Boosting Classifier | 0.974    | 0.977    | 0.994  | 0.986     |
 | CatBoost Classifier          | 0.972    | 0.975    | 0.994  | 0.989     |
 | Multi-layer Perceptron       | 0.969    | 0.973    | 0.995  | 0.981     |
 | Random Forest                | 0.967    | 0.971    | 0.993  | 0.990     |
 | Support Vector Machine       | 0.964    | 0.968    | 0.980  | 0.965     |
-| Decision Tree                | 0.960    | 0.964    | 0.991  | 0.993     |
-| K-Nearest Neighbors          | 0.956    | 0.961    | 0.991  | 0.989     |
-| Logistic Regression          | 0.934    | 0.941    | 0.943  | 0.927     |
-| Naive Bayes Classifier       | 0.605    | 0.454    | 0.292  | 0.997     |
 
-## Project Interface
+The Gradient Boosting Classifier demonstrated superior performance, achieving 97.4% accuracy in phishing URL detection.
 
-### 1. Home Page
+## User Interface
+
+### Home Page
 ![Home Page](https://github.com/Mugeshcybersecurity/Phishing-Url-Checker/blob/main/Output-samples/URL.png)
 
-- Clean, user-friendly interface
-- Prominent URL input field for easy submission
-- Clear navigation menu for accessing other sections
-- Informative header explaining the purpose of the tool
+- Clean, intuitive design for easy URL submission
+- Clear navigation to additional features
 
-### 2. Result Page
+### Result Page
 ![Result Page](https://github.com/Mugeshcybersecurity/Phishing-Url-Checker/blob/main/Output-samples/result.png)
 
-- Clear presentation of the URL analysis result
-- Visual indicator of the phishing probability
-- Option to check another URL for continuous use
+- Comprehensive analysis display
+- Visual representation of phishing probability
+- Detailed breakdown of decision factors
 
-### 3. More Tab
+### Additional Resources
 ![More Tab](https://github.com/Mugeshcybersecurity/Phishing-Url-Checker/blob/main/Output-samples/mOREpng.png)
 
-- Additional resources for user education and engagement
 - Option to report suspected phishing sites
-- Link to Google Safe Browsing for further verification
-- Interactive quiz to test and improve phishing awareness
+- Link to Google Safe Browsing
+- Interactive phishing awareness quiz
 
-### 4. Case Study Tab
+### Case Studies
 ![Case Study Tab](https://github.com/Mugeshcybersecurity/Phishing-Url-Checker/blob/main/Output-samples/CASE%20STUDY.png)
 
-- Comprehensive collection of real-world phishing case studies
-- Detailed descriptions of previous phishing incidents
-- Analysis of tactics used by phishers
-- Lessons learned and prevention strategies
+- In-depth analysis of real phishing incidents
+- Insights into phishing tactics and prevention strategies
 
-## Conclusion
+## Key Findings
 
-- This project provides valuable insights into the features that significantly impact a model's ability to detect phishing URLs.
-- Key features such as "HTTPS," "AnchorURL," and "WebsiteTraffic" play crucial roles in URL classification.
-- The Gradient Boosting Classifier achieved the highest accuracy at 97.4%, demonstrating its effectiveness in reducing the risk of malicious attachments.
-- The user-friendly interface and educational components make this tool valuable for both technical and non-technical users.
+- Features like "HTTPS," "AnchorURL," and "WebsiteTraffic" are crucial in accurate URL classification.
+- The Gradient Boosting Classifier outperformed other models, providing reliable phishing detection.
+- A combination of machine learning and user education is essential for comprehensive phishing prevention.
+
+## Future Enhancements
+
+- Integration with browser extensions for real-time protection
+- Incorporation of natural language processing for content analysis
+- Development of an API for third-party integrations
 
 ## Contributing
 
-We welcome contributions to improve this project. Please feel free to submit issues and pull requests.
+We welcome contributions to enhance this project.
