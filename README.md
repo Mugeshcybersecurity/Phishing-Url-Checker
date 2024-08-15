@@ -76,7 +76,8 @@ Our comparative analysis of various machine learning models yielded the followin
 | Support Vector Machine       | 0.964    | 0.968    | 0.980  | 0.965     |
 
 The Gradient Boosting Classifier demonstrated superior performance, achieving 97.4% accuracy in phishing URL detection.
-
+For more info check this ##colab Link
+https://colab.research.google.com/drive/1giaCACgQFmh33_ycwz_voSnYKKaOeDgO?usp=sharing
 ## User Interface
 
 ### Home Page
